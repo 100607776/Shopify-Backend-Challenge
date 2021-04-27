@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/settings.css" style="text/css">
+        <script src="js/user.js"></script>
+    </head>
+    <body onload="initialAlbum()" onclick="selectioncan()">
+        <div id="userid" class="front_container">
+            <img id="userpic" src="defaut_userimg.png">
+            <ul>
+                <li style="height: 70%">
+                    <div id="username">Username</div><div id="idnumber"></div>
+                </li>
+                <li style="height: 30%">
+                    <!--<a href ="index.html" id="logout" class="userbutton">Logout</a> <div style="float: left">&emsp;&ensp;</div>-->
+                    <a href="user_page.html" id="returntouserpage" class="userbutton">Return</a>
+
+                </li>
+            </ul>
+
+
+        </div>
+
+        <div id="pic" class="body_container">
+
+        </div>
+        <div id="picmenu">
+            <ul id="albumlisting">Select An Album</ul><ul id="friendlisting">Select A Friend</ul>
+            <div id="picbuttons">
+                <button id="addtobutton" onclick="addToBut()">Add To</button>
+                <button id="sharetobutton" onclick="shareToBut()">Share</button>
+                <button id="deletebutton" onclick="deletePhoto()">Delete</button>
+            </div>
+        </div>
+    </body>
+</html>

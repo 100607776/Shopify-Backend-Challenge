@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/settings.css" style="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/user.js"></script>
+    </head>
+    <body onload="initialUserPage()">
+        <div id="userid" class="front_container">
+            <img id="userpic" src="defaut_userimg.png">
+            <ul>
+                <li style="height: 70%">
+                    <div id="username">Username</div><div id="idnumber"></div>
+                </li>
+                <li style="height: 30%">
+                    <!--<a href="user_settings.html" id="usersettings" class="userbutton">Settings</a> <div style="float: left">&emsp;&ensp;</div>-->
+                    <a href ="index.html" id="logout" class="userbutton">Logout</a>
+                    
+                </li>
+            </ul>
+        </div>
+
+        <div id="albums" class="body_container">
+            
+        </div>
+
+        <button id="flbutton">Friends</button>
+        <div id="friendlist">
+            <input id="searchfriend" type="text" placeholder="Friend's id"><button id="searchconfirm" onclick="addfriend()">add</button>
+            <ul id="friendlist_t">
+            </ul>
+        </div>
+
+
+        <div id="uploader"><label><div id="uploaddesc">Upload</div><input id="floader" type="file" multiple onchange="showSelectFileN()"></label><button onclick="upload()">Confirm</button></div>
+
+        <script>
+            //jquery slide friendlist
+            $(document).ready(function(){
+                $("#flbutton").click(function(){
+                    $("#friendlist").slideToggle("slow");
+
+                });
+            });
+        </script>
+    </body>
+</html>

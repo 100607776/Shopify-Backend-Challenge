@@ -1,0 +1,93 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="css/settings.css" style="text/css">
+        <script src="js/user.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <meta name="google-signin-client_id" content="769266828984-44vpb2cc1u9459kt3om8ovslf0pn1cer.apps.googleusercontent.com">
+        <!--<script src="js/google.js"></script>-->
+    </head>
+    <body onbeforeunload="gapi.auth2.getAuthInstance().signOut()">
+        <div id="block1">
+            <div id="login">
+
+                <table>
+                    <tr><th id="logInTitle">Login</th></tr>
+                    <tr>
+                        <th class="title">
+                            E-mail
+                        </th>
+                        <th>
+                            <input type="text" id="lemail">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="title">
+                            Password
+                        </th>
+                        <th>
+                            <input type="password" id="lpassword">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><div class="g-signin2" data-onsuccess="onSignIn"></div></th>
+                        <th><button id="lsub"  class="confirmbut" onclick="login()">Login</button></th>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div id="register">
+
+                <table>
+                    <tr><th id="registerTitle">Register</th></tr>
+                    <tr>
+                        <th class="title2">
+                            User Name
+                        </th>
+                        <th>
+                            <input type="text" id="rusername">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="title2">
+                            Password
+                        </th>
+                        <th>
+                            <input type="password" id="rpassword">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="title2">
+                            E-mail
+                        </th>
+                        <th>
+                            <input type="text" id="remail">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="title2">
+                            Telephone
+                        </th>
+                        <th>
+                            <input type="text" id="rtelephone">
+                        </th>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th></th>
+                        <th><button id="rsub" class="confirmbut" onclick="register()">Register</button></th>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <div id="display"></div>
+        <!--
+        <form action="registration.php">
+            <input type="submit">
+        </form>
+        -->
+    </body>
+</html>
